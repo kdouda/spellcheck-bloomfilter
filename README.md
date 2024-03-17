@@ -1,5 +1,7 @@
 # TypeScript spellcheck bloom filter
 
+![alt text](img/rendered.png)
+
 Implementation of a bloom filter in TypeScript with the indended purpose of spellchecking.
 
 ## Description
@@ -7,6 +9,10 @@ Implementation of a bloom filter in TypeScript with the indended purpose of spel
 Simplistic implementation of a bloom filter for spellchecking in TypeScript, using the murmur3 hash function, a dictionary file and simple serialization/deserialization of the bloom filter.
 
 For the linked dictionary of 467k files, the resulting JSON is roughly 1.1MB raw, or roughly 621k gzipped, with a false positive rate setting of 1%. Generating the file takes roughly 2 seconds on an Apple M2 Max CPU. Benchmark script reports roughly 280 kops/s when looking up a word.
+
+This is not released as a library on purpose, as there are many other implementatitons of bloom filters and spellchecking with bloom filters is not the recommended approach.
+
+Future versions may be more focused on performance.
 
 ## Getting Started
 
@@ -19,6 +25,8 @@ For the linked dictionary of 467k files, the resulting JSON is roughly 1.1MB raw
 
 * clone this project `git clone https://github.com/kdouda/spellcheck-bloomfilter.git`
 * install dependencies `npm i`
+
+### Limitation
 
 ### Executing program
 
