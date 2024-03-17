@@ -1,0 +1,19 @@
+{
+  "scripts": {
+    "generate": "npx tsx src/generate.ts",
+    "check": "npx tsx src/load.ts",
+    "dev": "npx tsx src/index.ts",
+    "test": "ts-mocha -p tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.12",
+    "@types/mocha": "^10.0.6",
+    "chai": "^5.1.0",
+    "cross-env": "^7.0.3",
+    "mocha": "^10.3.0",
+    "ts-mocha": "^10.0.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.7.1",
+    "typescript": "^5.4.2"
+  }
+}
