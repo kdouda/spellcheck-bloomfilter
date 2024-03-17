@@ -9,6 +9,7 @@ const bf = BloomFilter.deserialize(
 
 if (bf.check('hello')) {
     // likely in the set, awesome!
+    // now we run a more expensive check
 } else {
     // definitely not in the set, is a typo!
 }

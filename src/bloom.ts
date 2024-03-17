@@ -48,6 +48,8 @@ export class BloomFilter
     }
 
     add(item: string) : void {
+        item = item.toLowerCase();
+
         for (let i = 0; i < this.hashCount; i++) {
             const digest = hash(item, i) % this.m;
             this.bitfield.set(digest);
@@ -55,6 +57,8 @@ export class BloomFilter
     }
 
     check(item: string) : boolean {
+        item = item.toLowerCase();
+        
         for (let i = 0; i < this.hashCount; i++) {
             const digest = hash(item, i) % this.m;
 
