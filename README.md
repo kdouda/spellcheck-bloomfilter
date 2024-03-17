@@ -12,7 +12,7 @@ For the linked dictionary of 467k files, the resulting JSON is roughly 1.1MB raw
 
 This is not released as a library on purpose, as there are many other implementatitons of bloom filters and spellchecking with bloom filters is quite a limited approach, but still viable as a first-pass step for more expensive spell-checking functions.
 
-Future versions may be more focused on performance, smaller file sizes and more extensive methods for spellchecking.
+Future versions may be more focused on performance, smaller file sizes and more extensive methods for spellchecking. Possible avenues to achieve this include web assembly, different hashing algorithm, compression and better data source.
 
 ## Getting Started
 
