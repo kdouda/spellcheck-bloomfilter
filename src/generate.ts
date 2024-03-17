@@ -15,6 +15,5 @@ readline.createInterface({
     bloom.add(line);
 }).on('close', () => {
     console.log('done');
-    console.timeEnd('done');
     writeFileSync('bloom.json', JSON.stringify(bloom.serialize()));
 });

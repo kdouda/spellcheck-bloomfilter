@@ -3,6 +3,10 @@ const toBytes = (text: string) : Uint8Array => {
     return encoder.encode(text);
 };
 
+/** 
+ * Sourced from:
+ * https://github.com/garycourt/murmurhash-js/blob/master/murmurhash3_gc.js
+*/
 export const hash = (key: string, seed: number) => {
     const str = toBytes(key);
     let remainder, bytes, h1, h1b, c1, c1b, c2, c2b, k1, i;

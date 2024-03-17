@@ -1,6 +1,7 @@
 {
   "scripts": {
     "generate": "npx tsx src/generate.ts",
+    "benchmark": "npx tsx util/benchmark.ts",
     "check": "npx tsx src/load.ts",
     "dev": "npx tsx src/index.ts",
     "test": "ts-mocha -p tsconfig.json"
@@ -8,6 +9,7 @@
   "devDependencies": {
     "@types/chai": "^4.3.12",
     "@types/mocha": "^10.0.6",
+    "benny": "^3.7.1",
     "chai": "^5.1.0",
     "cross-env": "^7.0.3",
     "mocha": "^10.3.0",
