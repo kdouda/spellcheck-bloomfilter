@@ -10,7 +10,7 @@ export class Bitfield
     }
 
     private arrayPosition(index: number) {
-        return Math.floor(index / 8);
+        return (index / 8 | 0); //Math.floor(index / 8);
     }
 
     private subindex(index: number) {
@@ -37,11 +37,9 @@ export class Bitfield
         if (index > this.size) {
             throw new Error("Index out of bounds");
         }
-
-        const val = this.array[this.arrayPosition(index)];
-        const t = (this.subindex(index));
-
-        return (val & (1 << t)) > 0;
+        return (
+            this.array[this.arrayPosition(index)] & (1 << (index % 8))
+        ) > 0;
     }
 
     serialize() : string {
